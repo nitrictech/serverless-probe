@@ -1,0 +1,6 @@
+name: probe
+services:
+    - basedir: ""
+      match: services/*.ts
+      start: npm run dev:services $SERVICE_PATH
+batch-services: []
