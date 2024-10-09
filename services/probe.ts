@@ -1,9 +1,9 @@
 import { api } from '@nitric/sdk'
 import { exec } from 'node:child_process'
 
-const helloApi = api('main')
+const mainApi = api('main')
 
-helloApi.get('/cpus', async (ctx) => {
+mainApi.get('/cpus', async (ctx) => {
   ctx.res.body = await new Promise((resolve) => {
     exec('cat /proc/cpuinfo', (error, stdout, stderr) => {
       if (error) {
